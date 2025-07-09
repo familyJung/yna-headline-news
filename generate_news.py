@@ -1,16 +1,13 @@
-# generate_news.py
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-
-soup = BeautifulSoup(response.content, "html.parser")
 
 RSS_URL = "https://www.yna.co.kr/rss/all01.xml"
 time_slots = {"07:30": 450, "10:30": 630, "14:30": 870, "18:00": 1080}
 
 def fetch_news():
     response = requests.get(RSS_URL)
-    soup = BeautifulSoup(response.content, "xml")
+    soup = BeautifulSoup(response.content, "html.parser")  # ← 여기 수정됨
     items = soup.find_all("item")
     news_data = []
     for item in items:
