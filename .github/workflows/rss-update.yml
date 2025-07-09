@@ -33,3 +33,7 @@ jobs:
         git add index.html
         git commit -m "Auto update news"
         git push
+
+    - name: Install dependencies
+      run: pip install requests beautifulsoup4 lxml
+   
