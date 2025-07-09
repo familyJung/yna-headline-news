@@ -35,5 +35,7 @@ jobs:
         git push
 
     - name: Install dependencies
-      run: pip install requests beautifulsoup4 lxml
+      run: |
+        pip install requests beautifulsoup4 lxml
+
    
