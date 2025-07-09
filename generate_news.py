@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+soup = BeautifulSoup(response.content, "html.parser")
+
 RSS_URL = "https://www.yna.co.kr/rss/all01.xml"
 time_slots = {"07:30": 450, "10:30": 630, "14:30": 870, "18:00": 1080}
 
